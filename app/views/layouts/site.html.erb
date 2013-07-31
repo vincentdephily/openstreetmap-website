@@ -102,7 +102,6 @@
            <li><%= link_to t('layouts.log_in'), login_path(:referer => request.fullpath), {:id => 'loginanchor', :title => t('layouts.log_in_tooltip')} %></li>
            <li><%= link_to t('layouts.sign_up'), user_new_path, {:id => 'registeranchor', :title => t('layouts.sign_up_tooltip')} %></li>
          <% end %>
-        <li><%= link_to t('layouts.help'), help_path %></li>
       </ul>
       <ul id="tabnav">
         <li><%= link_to t('layouts.view'), root_path, {
@@ -121,6 +120,10 @@
           :data => { :minzoom => 11 },
           :title => t('javascripts.site.history_tooltip'),
           :class => 'geolink bbox'
+        } %></li>
+        <li><%= link_to t('layouts.help'), help_path, {
+          :id => 'helpanchor',
+          :title => t('layouts.help')
         } %></li>
       </ul>
     </div>
